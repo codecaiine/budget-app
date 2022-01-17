@@ -5,6 +5,10 @@ ruby '3.0.2'
 
 # Devise
 gem 'devise'
+
+#Generator
+gem 'habtm_generator', :group => :development
+
 # Linters
 gem 'rubocop', '>= 1.0', '< 2.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
