@@ -6,8 +6,8 @@ ruby '3.0.2'
 # Devise
 gem 'devise'
 
-#Generator
-gem 'habtm_generator', :group => :development
+# Generator
+gem 'habtm_generator', group: :development
 
 # Linters
 gem 'rubocop', '>= 1.0', '< 2.0'
