@@ -1,14 +1,9 @@
 class PurchasesController < ApplicationController
-  before_action :set_purchase, only: %i[show edit update destroy]
+  before_action :set_category, only: %i[new index create show edit update destroy]
 
   # GET /purchases or /purchases.json
   def index
-    @category = Group.find(params[:group_id])
-    p @category
-    p 'CONSOLE LOG'
-    @ewe = @category.group_purchases
-    p @ewe
-    @purchases = @ewe
+    @purchases = @category.purchases
   end
 
   # GET /purchases/1 or /purchases/1.json
@@ -24,7 +19,7 @@ class PurchasesController < ApplicationController
 
   # POST /purchases or /purchases.json
   def create
-    @purchase = Purchase.new(purchase_params)
+    @purchase = @category.purchases.create(purchase_params)
 
     respond_to do |format|
       if @purchase.save

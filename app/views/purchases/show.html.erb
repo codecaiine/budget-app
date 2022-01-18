@@ -1,4 +1,16 @@
 <p id="notice"><%= notice %></p>
+<p>
+  <strong>Name:</strong>
+  <%= @purchase.name %>
+</p>
+<p>
+  <strong>Amount:</strong>
+  <%= @purchase.amount %>
+</p>
 
-<%= link_to 'Edit', edit_purchase_path(@purchase) %> |
-<%= link_to 'Back', purchases_path %>
+<p>
+  <strong>User:</strong>
+  <%= @purchase.author_id %>
+</p>
+<%= link_to 'Edit', edit_group_purchase_path(@category, @purchase) %> |
+<%= link_to 'Back', :back %>
