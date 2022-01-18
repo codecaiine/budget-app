@@ -61,6 +61,10 @@ class PurchasesController < ApplicationController
     @purchase = Purchase.find(params[:id])
   end
 
+  def set_category
+    @category = Group.find(params[:group_id])
+  end
+
   # Only allow a list of trusted parameters through.
   def purchase_params
     params.require(:purchase).permit(:name, :amount).merge(author_id: current_user.id)
