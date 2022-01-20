@@ -1,17 +1,15 @@
 <%= form_with(model: @group) do |form| %>
   <div class="field">
-  <%= form.text_field :name, placeholder: "Name",
-  class: "py-3 px-4 border border-bg-darktext w-full font-proxima font-normal" %>
-</div>
-
-<div class="field">
-<%= form.text_field :icon, placeholder: "Icon",
-class: "py-3 px-4 border border-bg-darktext w-full font-proxima font-normal" %>
-</div>
-<% if group.errors.any? %>
+    <%= form.text_field :name, placeholder: "Name",
+    class: "py-3 px-4 border border-bg-darktext w-full font-proxima font-normal" %>
+  </div>
+  <div class="field">
+    <%= form.text_field :icon, placeholder: "Icon",
+    class: "py-3 px-4 border border-bg-darktext w-full font-proxima font-normal" %>
+  </div>
+  <% if group.errors.any? %>
 <div id="error_explanation">
   <h2><%= pluralize(group.errors.count, "error") %> prohibited this group from being saved:</h2>
-
   <ul>
     <% group.errors.each do |error| %>
       <li><%= error.full_message %></li>
@@ -21,7 +19,7 @@ class: "py-3 px-4 border border-bg-darktext w-full font-proxima font-normal" %>
 <% end %>
 
   <div class="bg-second py-4 absolute inset-x-0 bottom-0 text-center">
-    <%= form.submit 'ADD NEW CATEGORY', class: "bg-transparent text-center text-white py-4 px-24
+   <%= form.submit 'ADD CATEGORY', class: "bg-transparent text-center text-white py-4 px-24
      font-proxima border-2 border-bg-white rounded-lg cursor-pointer" %>
   </div>
 
