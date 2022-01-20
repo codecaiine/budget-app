@@ -3,7 +3,7 @@
 <nav class="bg-main py-4 px-4">
   <ul class="flex justify-between items-center">
     <li>
-    <%= link_to groups_path do %>
+      <%= link_to groups_path do %>
       <i class="fa fa-bars text-white cursor-pointer"></i>
       <%end%>
     </li>
@@ -19,7 +19,7 @@
   <% @groups.each do |group| %>
     <li class="grid grid-cols-6 bg-white space-x-2 p-2 border border-gray-200">
       <div class="text-center">
-        <img src=<%group.icon%> alt="user-picture">
+        <img src=<%group.icon%> alt="group-picture">
       </div>
       <div class="col-start-2 col-span-4 text-gray-400">
         <%= link_to group_purchases_path(group) do%>
