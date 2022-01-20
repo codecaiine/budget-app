@@ -1,7 +1,6 @@
 <h2>Sign up</h2>
-
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-
+  
   <nav class="bg-main py-2 px-4">
     <ul class="flex justify-between items-center">
       <li>
@@ -17,36 +16,31 @@
       </li>
     </ul>
   </nav>
-
   <div class="field">
-  <%= f.text_field :name, autofocus: true,
-  placeholder: "Name",
-  class: "py-3 px-4 border border-bg-darktext w-full font-proxima font-normal" %>
-</div>
-<div class="field">
-<%= f.email_field :email, autofocus: true,
-autocomplete: "email", placeholder: "Email",
-class: "py-3 px-4 border border-bg-darktext w-full font-proxima font-normal" %>
-</div>
-
-<div class="field">
-<%= f.password_field :password, autocomplete: "new-password",
-placeholder: "Password",
-class: "py-3 px-4 border border-bg-darktext w-full font-proxima font-normal" %>
-</div>
-<%= f.password_field :password_confirmation, 
-autocomplete: "new-password", placeholder: "Password Confirmation",
-class: "py-3 px-4 border border-bg-darktext w-full font-proxima font-normal" %>
-</div>
+    <%= f.text_field :name, autofocus: true,
+    placeholder: "Name",
+    class: "py-3 px-4 border border-bg-darktext w-full font-proxima font-normal" %>
+  </div>
+  <div class="field">
+    <%= f.email_field :email, autofocus: true,
+     autocomplete: "email", placeholder: "Email",
+     class: "py-3 px-4 border border-bg-darktext w-full font-proxima font-normal" %>
+  </div>
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "new-password",
+     placeholder: "Password",
+     class: "py-3 px-4 border border-bg-darktext w-full font-proxima font-normal" %>
+  </div>
+  <div class="field">
+    <%= f.password_field :password_confirmation, 
+    autocomplete: "new-password", placeholder: "Password Confirmation",
+    class: "py-3 px-4 border border-bg-darktext w-full font-proxima font-normal" %>
+  </div>
 <% end %>
-
-<div class="text-center pt-4 bg-transparent text-gray-400 hover:underline">
+<div class="text-center pt-4 bg-transparent text-gray-400 hover:underline font-proxima">
   <%= link_to "Log in", new_session_path(resource_name) %>
 </div>
 
 <div>
   <%= render "devise/shared/error_messages", resource: resource %>
 </div>
-
-  
-
