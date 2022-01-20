@@ -16,13 +16,13 @@
     </ul>
   </nav>
   <div class="w-full px-4 mt-4">
-  <div class="p-4 space-y-4 bg-white rounded">
-    <h2 class="font-bold font-proxima"><%= @purchase.name %></h2>
-    <p class="font-proxima"><%= @purchase.amount %> unit</p>
-    <div class="font-proxima">     
-      <%= link_to 'Edit', edit_group_purchase_path(@category, @purchase), class: 'text-white py-2 px-8
-      font-proxima border-2 bg-second rounded-lg cursor-pointer' %>
+    <div class="p-4 space-y-4 bg-white rounded">
+      <h2 class="font-bold font-proxima"><%= @purchase.name %></h2>
+      <p class="font-proxima"><%= @purchase.amount %> unit</p>
+      <div class="font-proxima">     
+        <%= link_to 'Edit', edit_group_purchase_path(@category, @purchase), class: 'text-white py-2 px-8
+       border-2 bg-second rounded-lg cursor-pointer' %>
+      </div>
     </div>
   </div>
-</div>
 </section>

@@ -15,27 +15,28 @@
       </li>
     </ul>
   </nav>
+  
   <div class="px-4 py-4 flex justify-between items-center bg-white">
-  <p class="font-proxima text-gray-500">Total of transactions:</p>
-  <p class="font-bold font-proxima"><%= @category.total_amount %></p>
-</div>
-<ul class="w-full px-4 mt-2 space-y-2">
-  <% @purchases.each do |purchase| %>
-    <li class="grid grid-cols-6 bg-white space-x-2 p-2 border border-gray-200">
-      <div class="text-center">
-        <img src="image.jpg">
-      </div>
-      <div class="col-start-2 col-span-4 text-gray-400">
-        <%= purchase.name %>
-      </div>
-      <div class="">
-        <p class="font-bold"><%= purchase.amount %></p>
-      </div>
-    </li>
-  <% end %>
-</ul>
+    <p class="font-proxima text-gray-500">Total of transactions:</p>
+    <p class="font-bold font-proxima"><%= @category.total_amount %></p>
+  </div>
+  <ul class="w-full px-4 mt-2 space-y-2">
+    <% @purchases.each do |purchase| %>
+      <li class="grid grid-cols-6 bg-white space-x-2 p-2 border border-gray-200">
+        <div class="text-center">
+          <img src="image.jpg">
+        </div>
+        <div class="col-start-2 col-span-4 text-gray-400 font-proxima">
+          <%= purchase.name %>
+        </div>
+        <div class="text-right">
+          <p class="font-bold font-proxima"><%= purchase.amount %></p>
+        </div>
+      </li>
+    <% end %>
+  </ul>
 <div class="bg-second py-8 absolute inset-x-0 bottom-0 text-center">
-<%= link_to 'ADD NEW TRANSACTION', new_group_purchase_path, class: "text-center text-white py-4 px-20
- font-proxima border-2 border-bg-white rounded-lg cursor-pointer" %>
+  <%= link_to 'ADD NEW TRANSACTION', new_group_purchase_path, class: "text-center text-white py-4 px-20
+   font-proxima border-2 border-bg-white rounded-lg cursor-pointer" %>
 </div>
 </section>
