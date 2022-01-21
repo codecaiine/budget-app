@@ -7,7 +7,7 @@ Budget App is a mobile web application where you can manage your budget: you hav
 
 ## :red_circle: Video Preview
 
-- [Presentation Link]()
+- [Presentation Link](https://www.loom.com/share/394585f64fe843d89b8bd2dbf376c21a)
 ## :hammer: Preview
 
 ## Built With
