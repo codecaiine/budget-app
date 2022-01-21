@@ -1,11 +1,12 @@
 /* stylelint-disable */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* stylelint-enable */
-@import url("./fonts.css");
-@import "font-awesome";
 
+/* stylelint-enable */
+
+@import url("./fonts.css");
 .image {
-  width: calc(50px + 2vw);
+    width: calc(50px + 2vw);
 }
